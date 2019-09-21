@@ -1,0 +1,21 @@
+.goat {
+  &.big {
+    width: 100vw;
+  }
+}
+
+.goat.home {
+  @include flex();
+  background: $yellow;
+  height: 90vh;
+  a {
+    // h,w are some what arbitrary
+    width: 70px;
+    height: 90px;
+    border-bottom: solid 3px #fff;
+    text-align: center;
+  }
+  img {
+    width: 70%;
+  }
+}
