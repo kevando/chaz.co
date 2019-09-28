@@ -1,15 +1,20 @@
+
+
 .empathy {
-
-
   padding: 20px;
 
   img.simpsons {
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    // height: 40vh;
+    // max-height: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
   }
 
   h4 {
-    font-size: 31px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.4em;
@@ -17,6 +22,24 @@
     display: inline-block;
     background: black;
     position: absolute;
-    padding: 3px 18px;
+    padding: 4px 13px;
+
+    // small screen
+    @media only screen and (max-width: 600px) {
+      font-size: 22px;
+      font-weight: 900;
+    }
+  }
+
+  a.manifesto {
+    text-decoration: underline;
+    font-family: Times New Roman;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    color: blue;
+    &:visited {
+      color: purple;
+    }
   }
 }
+

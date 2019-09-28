@@ -70,10 +70,10 @@ a {
     line-height: 1.5em;
     border-bottom: solid $link-border-size transparent;
   }
-  &:hover {
-    border-bottom: solid $link-border-size white;
-    text-decoration: underline;
-  }
+  // &:hover {
+  //   border-bottom: solid $link-border-size white;
+  //   text-decoration: underline;
+  // }
 }
 
 pre {
