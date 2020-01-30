@@ -16,3 +16,5 @@ _posts/_drafts/*
 *.css.map
 
 *.code-workspace
+
+.jekyll-cache
