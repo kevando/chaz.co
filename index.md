@@ -17,7 +17,7 @@ title: Empathy solves everything
     class="manifesto" 
     href="https://www.notion.so/kevando/Chaz-ced9f1fc189946588343c7a837a9c8fb" 
     target="blank_" 
-    onclick="_gaq.push(['_trackEvent', 'Manifesto', 'clicked']);" 
+    onclick="ga('send', 'event', 'Manifesto', 'click', 'Bart and Skinner');" 
     >Manifesto</a>
 
 </div>
