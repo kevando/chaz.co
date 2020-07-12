@@ -1,35 +1,18 @@
 
-# ----------------------
-#    Site settings
-# ----------------------
+# Site settings
+title: Moments of Empathy
+description: It's nice to be your neighbor.
+baseurl: "/" 
+url: "https://chaz.co" 
 
-# title: Kevando
-description: Chaz
-# baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://chaz.co" # the base hostname & protocol for your site, e.g. http://example.com
-
-
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-
-
-# ----------------------
-#      SEO Shit
-# ----------------------
-
+# SEO
 google_analytics: UA-89282611-1
 
-
-# ----------------------
-#    Groups of Shit
-# ----------------------
-
+# CMS
 collections:
   moments:
     output: true
+    sort_by: sort
 
 defaults:
   -
@@ -38,3 +21,11 @@ defaults:
       type: moment
     values:
       layout: "moment"
+
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed

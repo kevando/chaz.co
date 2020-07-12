@@ -2,13 +2,69 @@ body {
   background-color: $grey;
 }
 
+h3 {
+  margin: 1.2em 0 0.1em 0;
+}
+p {
+  margin: 0.1em 0;
+}
+
+.header {
+  .nav {
+    margin: 10px 0;
+    a {
+      margin: 0 5px;
+      font-size: 17px;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
 main {
   .moment.item {
-    max-width: 400px;
+    width: 100%;
     margin-bottom: 50px;
+    display: flex;
 
-    img {
-      border: solid 2px black;
+    &.image {
+      max-width: 500px;
+      border: solid 3px black;
+      padding: 4px;
+      p {
+        margin: 5px 0 42px 0;
+      }
+    }
+
+    blockquote {
+      width: 60%;
+      margin: 40px 20% 10px 20%;
+      border-left: solid 2px white;
+      padding: 8px 23px;
+      color: white;
+      font-style: italic;
+      font-family: Georgia;
+      font-size: 1.2em;
+      text-shadow: #00000047 0px 0px 5px;
+    }
+    cite {
+      margin-left: 22%;
+    }
+
+    .video {
+      background-color: white;
+      padding: 5px;
+      p {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  ul {
+    li {
+      margin: 5px 0;
+      a {
+        font-weight: bold;
+      }
     }
   }
 }
