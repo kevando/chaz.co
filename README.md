@@ -1,10 +1,9 @@
-[with]: assets/images/skinner.png
-[without]: assets/images/hanging.png
+### Development
 
-# `Empathy`
-![with]
-
-# `!Empathy`
-![without]
+```
+yarn dev
+```
 
 
+### Project Structure
+`_config.yml` is your starting place.

@@ -1,0 +1,18 @@
+body {
+  background-color: $grey;
+}
+
+main {
+  .moment.item {
+    max-width: 400px;
+    margin-bottom: 50px;
+
+    img {
+      border: solid 2px black;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}

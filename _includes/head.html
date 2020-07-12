@@ -1,24 +1,32 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    {%- seo -%}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  {%- seo -%}
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
 
-    <!-- feed meta? -->
-    {%- feed_meta -%}
+  <!-- feed meta? -->
+  {%- feed_meta -%}
 
-    <!-- Analytics -->
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-      {%- include google-analytics.html -%}
-    {%- endif -%}
+  <!-- Analytics -->
+  {%- if jekyll.environment == 'production' and site.google_analytics -%} {%-
+  include google-analytics.html -%} {%- endif -%} {%- include favicon.html -%}
 
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@kevando_" />
+  <meta name="twitter:title" content="Moments of Empathy" />
+  <meta name="twitter:image" content="/assets/images/skinner.png" />
 
-    {%- include favicon.html -%}
-
-
-
-
-  </head>
+  <!-- Facebook Preview Tags -->
+  <meta property="og:url" content="https://chaz.co" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Moments of Great Empathy" />
+  <meta
+    property="og:description"
+    content="If you don't know em, you can fight em"
+  />
+  <meta property="og:image" content="/assets/images/skinner.png" />
+</head>

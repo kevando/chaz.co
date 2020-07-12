@@ -28,13 +28,13 @@ google_analytics: UA-89282611-1
 # ----------------------
 
 collections:
-  category:
+  moments:
     output: true
 
 defaults:
   -
     scope:
       path: ""
-      type: category
+      type: moment
     values:
-      layout: "category"
+      layout: "moment"

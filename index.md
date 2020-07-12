@@ -1,23 +1,13 @@
 ---
-layout: empty
-title: Empathy solves everything
+layout: moments
+title: Moments of Empathy
+description: A collection of links, videos, and stories that demonstrate the profound impact of empathy. 
 ---
 
-<div class='empathy'>
+<h1>Moments of Empathy</h1>
+<hr />
 <div>
-<h4>With empathy</h4>
-<img src="/assets/images/skinner.png" class="simpsons" />
-</div>
-<div>
-<h4>Without empathy</h4>
-<img src="/assets/images/hanging.png" class="simpsons" />
-</div>
-
-<a 
-    class="manifesto" 
-    href="https://www.notion.so/kevando/Chaz-ced9f1fc189946588343c7a837a9c8fb" 
-    target="blank_" 
-    onclick="ga('send', 'event', 'Manifesto', 'click', 'Bart and Skinner');" 
-    >Manifesto</a>
-
+    {%- for moment in site.moments -%} 
+    <div class="moment item">{{ moment.content }} </div>
+    {%- endfor -%}
 </div>
