@@ -2,6 +2,6 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.md -%}
   <body>
-    <main>{{ content }}</main>
+    {{ content }}
   </body>
 </html>

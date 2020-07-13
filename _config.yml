@@ -16,13 +16,23 @@ collections:
 defaults:
   -
     scope:
-      path: ""
-      type: moment
+      path: "" # all files
+      type: pages
     values:
       layout: "moment"
+      description: For chazzy people.
+      twitter_title: Moments of Empathy
+      twitter_description: A collection of people demonstrating deep understanding 
+      twitter_image: https://chaz.co/assets/images/skinner.png
+      facebook_title: Moments of Great Empathy
+      facebook_description:
+      facebook_image: https://chaz.co/assets/images/skinner.png
+
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+

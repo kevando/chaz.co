@@ -23,14 +23,14 @@
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@kevando_" />
-  <meta name="twitter:title" content="{{ page.twitter.title}}" />
-  <meta name="twitter:description" content="{{ page.twitter.description }}" />
-  <meta name="twitter:image" content="https://chaz.co/assets/images/skinner.png" />
+  <meta name="twitter:title" content="{{ page.twitter_title}}" />
+  <meta name="twitter:description" content="{{ page.twitter_description }}" />
+  <meta name="twitter:image" content="{{ page.twitter_image }}" />
 
   <!-- Facebook Preview Tags -->
   <meta property="og:url" content="https://chaz.co" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="{{ page.facebook.title}}" />
-  <meta property="og:description" content="{{ page.facebook.description }}" />
-  <meta property="og:image" content="/assets/images/skinner.png" />
+  <meta property="og:title" content="{{ page.facebook_title}}" />
+  <meta property="og:description" content="{{ page.facebook_description }}" />
+  <meta property="og:image" content="{{ page.facebook_image }}" />
 </head>

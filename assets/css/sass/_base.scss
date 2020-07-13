@@ -9,3 +9,25 @@ html {
 :focus {
   outline: none;
 }
+body {
+  margin: 0;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+
+
+// Custom footer bullshit
+html, body, main {
+  height: 100%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}

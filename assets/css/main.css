@@ -1,11 +1,5 @@
-.shadow, main .moment.item.quote {
+.shadow {
   box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.493), inset -20px 0 80px rgba(0, 255, 255, 0.527), inset -20px 0 300px rgba(0, 255, 255, 0.527);
-}
-
-.moment-card, main .moment.item {
-  border-width: 2px;
-  border-color: #ffffffb5;
-  border-style: double;
 }
 
 html {
@@ -22,103 +16,8 @@ html {
   outline: none;
 }
 
-h1 {
-  font-weight: normal;
-}
-
-h3 {
-  margin: 1.2em 0 0.1em 0;
-  font-size: 1.1em;
-}
-
-p {
-  margin: 0.4em 0;
-  font-size: 20px;
-}
-@media screen and (max-width: 300px) {
-  p {
-    font-size: 16px;
-  }
-}
-
-a {
-  font-size: 1.1em;
-}
-a:visited {
-  color: yellow;
-}
-
-.header h1 {
-  font-weight: bold;
-}
-
-.bones {
-  background-image: url(/assets/images/kiss.png);
-  background-size: 55px 55px;
-  background-repeat: repeat;
-}
-
-.rock, body {
-  background-image: url(/assets/images/bg.jpg);
-  background-size: 500px 500px;
-  background-repeat: repeat;
-}
-
 body {
-  background-color: #c0c0c0;
   margin: 0;
-}
-
-.nav a {
-  margin: 0 5px;
-}
-
-.header h1 {
-  font-weight: bold;
-}
-
-main {
-  padding: 20px 20px;
-}
-main .moment.item {
-  width: 100%;
-  margin-bottom: 50px;
-  display: flex;
-}
-main .moment.item.image {
-  max-width: 500px;
-  border: solid 3px black;
-  padding: 4px;
-}
-main .moment.item.image p {
-  margin: 5px 0 42px 0;
-}
-main .moment.item blockquote {
-  width: 60%;
-  margin: 40px 20% 10px 20%;
-  border-left: solid 2px white;
-  padding: 8px 23px;
-  color: white;
-  font-style: italic;
-  font-family: Georgia;
-  font-size: 1.2em;
-  text-shadow: #00000047 0px 0px 5px;
-}
-main .moment.item cite {
-  margin-left: 22%;
-}
-main .moment.item .video {
-  background-color: white;
-  padding: 5px;
-}
-main .moment.item .video p {
-  margin: 10px 0;
-}
-main ul li {
-  margin: 5px 0;
-}
-main ul li a {
-  font-weight: bold;
 }
 
 img {
@@ -136,6 +35,144 @@ main {
 
 .content {
   flex: 1 0 auto;
+}
+
+h1 {
+  font-weight: normal;
+}
+h1.title {
+  font-weight: bold;
+}
+h1 h1.title {
+  font-weight: bold;
+}
+h1 h1.title span {
+  font-weight: normal;
+}
+@media (max-width: 599px) {
+  h1 h1.title {
+    font-size: 0.8rem;
+  }
+}
+
+h3 {
+  margin: 1.2em 0 0.1em 0;
+  font-size: 1.1em;
+}
+
+p {
+  margin: 0;
+  font-size: 20px;
+}
+@media (max-width: 599px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+a {
+  font-size: 1.1em;
+}
+a:visited {
+  color: yellow;
+}
+
+.moment.item {
+  display: block;
+  unicode-bidi: isolate;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 4px;
+  margin: 4rem 0;
+}
+.moment.item.video {
+  display: block;
+  unicode-bidi: isolate;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 21px;
+  width: 500px;
+}
+.moment.item .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.moment.item .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.moment.item.quote {
+  background: rgba(102, 102, 102, 0.08);
+  border: 5px solid #666;
+  max-width: 600px;
+}
+.moment.item.quote .content {
+  border-width: 10px;
+  border-style: solid;
+  border-color: #555 #888 #555 #888;
+}
+.moment.item.quote blockquote {
+  margin: 0;
+  padding: 8px 23px;
+  color: white;
+  font-style: italic;
+  font-family: Georgia;
+  font-size: 1.2em;
+  text-shadow: #00000047 0px 0px 5px;
+}
+.moment.item.quote p.cite {
+  margin-left: 23px;
+}
+.moment.item.image {
+  padding: 2rem;
+  display: block;
+  unicode-bidi: isolate;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  background: #ffffff24;
+}
+.moment.item.image img {
+  border: solid 1px #5959596b;
+}
+.moment.item.small {
+  width: 400px;
+}
+
+.bones {
+  background-image: url(/assets/images/kiss.png);
+  background-size: 55px 55px;
+  background-repeat: repeat;
+}
+
+.rock, body {
+  background-image: url(/assets/images/bg.jpg);
+  background-size: 500px 500px;
+  background-repeat: repeat;
+}
+
+.nav a {
+  margin: 0 5px;
+}
+
+.header {
+  margin: 0 20px;
+}
+
+main {
+  padding: 0 20px;
+}
+main ul li {
+  margin: 5px 0;
+}
+main ul li a {
+  font-weight: bold;
 }
 
 footer {

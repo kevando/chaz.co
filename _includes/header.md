@@ -1,4 +1,4 @@
 <div class="header">
-  <h1><a href="/">Chaz</a> — {{ page.title }}</h1>
-<hr />
+  <h1 class="title"><a href="/">Chaz</a> <span>—</span> {{ page.title }}</h1>
+  <hr />
 </div>

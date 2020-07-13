@@ -1,6 +1,18 @@
-
 h1 {
   font-weight: normal;
+
+  &.title {
+    font-weight: bold;
+  }
+  h1.title {
+    font-weight: bold;
+    span {
+      font-weight: normal;
+    }
+    @include for-phone-only {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 h3 {
@@ -8,30 +20,22 @@ h3 {
   font-size: 1.1em;
 }
 p {
-  margin: 0.4em 0;
+  margin: 0;
   font-size: 20px;
 
-  @media screen and (max-width: $small) {
+
+  @include for-phone-only {
     font-size: 16px;
   }
-//   @media screen and (min-width: $medium) {
-//       //do Smth
-//   }
+  
 }
-
-
 
 // Links!
 a {
   font-size: 1.1em;
   &:visited {
-    color: yellow
+    color: yellow;
   }
 }
 
 // Special Text
-.header {
-  h1 {
-    font-weight: bold;
-  }
-}

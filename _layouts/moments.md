@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-
 {%- include header.md -%}
-<div class="content">
-{{ content }}
-</div>
-
+<main>{{ content }}</main>
 {%- include footer.md -%}
