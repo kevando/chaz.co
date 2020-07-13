@@ -1,5 +1,5 @@
 
-# Site settings
+# Site Settings
 title: Moments of Empathy
 description: It's nice to be your neighbor.
 baseurl: "/" 
@@ -12,7 +12,6 @@ google_analytics: UA-89282611-1
 collections:
   moments:
     output: true
-    sort_by: sort
 
 defaults:
   -
@@ -21,8 +20,6 @@ defaults:
       type: moment
     values:
       layout: "moment"
-
-
 
 # Build settings
 markdown: kramdown

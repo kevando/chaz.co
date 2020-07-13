@@ -1,6 +1,6 @@
 ---
 title: Breaking Bad
-sort: 1
+type: quote
 ---
 
 <div>

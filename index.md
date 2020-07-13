@@ -12,7 +12,7 @@ facebook:
 
 
 <div>
-    {%- for moment in site.moments -%} 
+    {%- for moment in site.moments reversed -%} 
     <div class="moment item {{ moment.type }}">{{ moment.content }} </div>
     {%- endfor -%}
 </div>

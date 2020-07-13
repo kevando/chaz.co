@@ -1,3 +1,13 @@
+.shadow, main .moment.item.quote {
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.493), inset -20px 0 80px rgba(0, 255, 255, 0.527), inset -20px 0 300px rgba(0, 255, 255, 0.527);
+}
+
+.moment-card, main .moment.item {
+  border-width: 2px;
+  border-color: #ffffffb5;
+  border-style: double;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -12,27 +22,64 @@ html {
   outline: none;
 }
 
-body {
-  background-color: #c0c0c0;
+h1 {
+  font-weight: normal;
 }
 
 h3 {
   margin: 1.2em 0 0.1em 0;
+  font-size: 1.1em;
 }
 
 p {
-  margin: 0.1em 0;
+  margin: 0.4em 0;
+  font-size: 20px;
+}
+@media screen and (max-width: 300px) {
+  p {
+    font-size: 16px;
+  }
 }
 
-.header .nav {
-  margin: 10px 0;
+a {
+  font-size: 1.1em;
 }
-.header .nav a {
+a:visited {
+  color: yellow;
+}
+
+.header h1 {
+  font-weight: bold;
+}
+
+.bones {
+  background-image: url(/assets/images/kiss.png);
+  background-size: 55px 55px;
+  background-repeat: repeat;
+}
+
+.rock, body {
+  background-image: url(/assets/images/bg.jpg);
+  background-size: 500px 500px;
+  background-repeat: repeat;
+}
+
+body {
+  background-color: #c0c0c0;
+  margin: 0;
+}
+
+.nav a {
   margin: 0 5px;
-  font-size: 17px;
-  letter-spacing: 0.02em;
 }
 
+.header h1 {
+  font-weight: bold;
+}
+
+main {
+  padding: 20px 20px;
+}
 main .moment.item {
   width: 100%;
   margin-bottom: 50px;
@@ -76,6 +123,29 @@ main ul li a {
 
 img {
   max-width: 100%;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+footer p {
+  margin: 20px 0;
+  font-size: 13px;
+  text-align: center;
+  color: #323232;
 }
 
 /*# sourceMappingURL=main.css.map */

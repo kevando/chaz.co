@@ -1,0 +1,37 @@
+
+h1 {
+  font-weight: normal;
+}
+
+h3 {
+  margin: 1.2em 0 0.1em 0;
+  font-size: 1.1em;
+}
+p {
+  margin: 0.4em 0;
+  font-size: 20px;
+
+  @media screen and (max-width: $small) {
+    font-size: 16px;
+  }
+//   @media screen and (min-width: $medium) {
+//       //do Smth
+//   }
+}
+
+
+
+// Links!
+a {
+  font-size: 1.1em;
+  &:visited {
+    color: yellow
+  }
+}
+
+// Special Text
+.header {
+  h1 {
+    font-weight: bold;
+  }
+}
