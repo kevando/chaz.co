@@ -1,0 +1,83 @@
+
+
+// ----------------------------
+//          Title
+// ----------------------------
+
+h1 {
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1em;
+
+  &.title {
+    font-size: 80px;
+    color: $yellow;
+    @include text-shadow($black, 8);
+
+    @include for-phone-only {
+      font-size: 60px;
+      line-height: 65px;
+      letter-spacing: 0;
+      @include text-shadow($black, 3);
+    }
+  }
+}
+
+h3 {
+  margin: 1.2em 0 0.1em 0;
+  font-size: 1.1em;
+}
+
+// PARAGRAPH
+
+p {
+  margin: 0;
+  font-size: 20px;
+  @include for-phone-only {
+    font-size: 19px;
+    line-height: 25px;
+  }
+  &.small {
+    font-size: 13px;
+    color: #323232;
+  }
+}
+
+// ----------------------------
+//          Links
+// ----------------------------
+
+a {
+  font-size: 1.1em;
+  font-weight: normal;
+  &:visited {
+    color: yellow;
+  }
+}
+
+// Special Text
+
+blockquote {
+  color: white;
+  font-style: italic;
+  font-family: Georgia;
+  font-size: 30px;
+  text-shadow: #00000047 0px 0px 5px;
+  &::before, &::after {
+    content: "\"";
+    font-family: cursive;
+    font-size: 40px;
+    line-height: 30px;
+  }
+
+
+  @include for-phone-only {
+    padding: 1em;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  &::before, &::after {
+    line-height: 20px;
+  }
+}

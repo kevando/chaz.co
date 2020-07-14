@@ -1,11 +1,29 @@
+
+
+// HEADER
+.header {
+  margin: 10px 0 20px 0;
+  @include for-desktop-up {
+    a {
+      display: none;
+    }  
+  }
+  
+}
+
+
+
+// MOMENTS
+
 .moment.item {
   @include inset-border(4px);
-  margin: 4rem 0;
+  margin: 0 0 4rem 0;
+  max-width: 400px;
 
   // VIDEO
   &.video {
     @include inset-border(21px);
-    width: 500px;
+    max-width: 400px;
   }
 
   .video-wrapper {
@@ -24,28 +42,12 @@
 
     // QUOTE
     &.quote {
-
-      @include framed-border(5px);
       max-width: 600px;
-      blockquote {
-        margin: 0;
-        padding: 8px 23px;
-        color: white;
-        font-style: italic;
-        font-family: Georgia;
-        font-size: 1.2em;
-        text-shadow: #00000047 0px 0px 5px;
-      }
-      p.cite {
-        margin-left: 23px;
-      }
-
-        
     }
 
     // IMAGE
     &.image {
-      padding: 2rem;
+      // padding: 2rem;
       @include inset-border(1px);
       background: #ffffff24;
 
@@ -54,9 +56,78 @@
       }
       
     }
+}
 
-    // SIZES
-    &.small {
-      width: 400px;
+
+img.logo {
+  // width: 100px;
+  margin-bottom: 10px;
+  @include for-phone-only {
+    // width: 50px;
+  }
+}
+
+
+
+body {
+  background-color: $background-color;
+}
+
+
+.faq {
+  img {
+    display: block;
+    max-width: 500px;
+    margin: 20px 0;
+    border: solid 2px white;
+  }
+}
+
+
+// NAV
+
+.nav {
+  a {
+    margin-right :5px;
+  }
+}
+
+
+
+// LAYOUT 
+
+main {
+  padding: $content-padding;
+
+  // List of links
+  ul {
+    padding-left: 20px;
+    li {
+      margin: 5px 0;
     }
+  }
+}
+
+
+// FOOTER CRAP
+$footer-height:15px;
+
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  padding-bottom: $footer-height;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 90vw;
+  padding: 5px 0;
+  .flag.emoji {
+    font-size: 19px;
+    margin-right: 10px;
+  }
 }

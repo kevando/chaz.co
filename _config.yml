@@ -19,7 +19,7 @@ defaults:
       path: "" # all files
       type: pages
     values:
-      layout: "moment"
+      layout: "default"
       description: For chazzy people.
       twitter_title: Moments of Empathy
       twitter_description: A collection of people demonstrating deep understanding 

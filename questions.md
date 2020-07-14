@@ -1,7 +1,8 @@
 ---
-layout: moments
-title: Frequenly Asked Questions About Empathy
+title: Common Questions
 ---
+
+{%- include header.md -%}
 
 
 ### What is the difference between empathy ans sympathy?
@@ -12,6 +13,10 @@ Yes, the more you empathize, the better you empathize.
 
 ### Does empathy produce any side effects?
 Grattitude.
+
+### What does empathy look like using only emoji?
+It looks terrible
+
 
 ### Can I empathize with everyone?
 Probably not. Some people have experiences that you simply won't be able to relate to. And that's okay.
