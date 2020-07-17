@@ -1,1 +1,16 @@
-@import "variables", "mixins", "base", "text", "components";
+@import "base/variables";
+
+@import "mixins/all", "mixins/responsive", "mixins/text";
+
+@import "base/normalize", "base/typography";
+
+@import 
+  "layout/spacing", 
+  "layout/footer", 
+  "layout/pages",
+  "layout/theme";
+
+@import 
+  "components/links",
+  "components/emoji",
+  "components/moments";

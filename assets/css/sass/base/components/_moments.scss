@@ -69,9 +69,6 @@ img.logo {
 
 
 
-body {
-  background-color: $background-color;
-}
 
 
 .faq {
@@ -97,7 +94,7 @@ body {
 // LAYOUT 
 
 main {
-  padding: $content-padding;
+  padding: $content-spacing;
 
   // List of links
   ul {
@@ -108,26 +105,3 @@ main {
   }
 }
 
-
-// FOOTER CRAP
-$footer-height:15px;
-
-main {
-  position: relative;
-  min-height: 100vh;
-}
-
-.content-wrapper {
-  padding-bottom: $footer-height;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 90vw;
-  padding: 5px 0;
-  .flag.emoji {
-    font-size: 19px;
-    margin-right: 10px;
-  }
-}

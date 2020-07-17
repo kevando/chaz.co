@@ -1,0 +1,67 @@
+
+
+.trial {
+
+
+  // .me {
+
+  //   a {
+  //     &:link {
+  //       color: grey;
+  //     }
+  //     &:visited {
+  //       color: green
+  //     }
+  //   }
+  // }
+}
+
+  .other {
+
+    // a {
+    //   &:link {
+    //     color: black;
+    //   }
+    //   &:visited {
+    //     color: white
+    //   }
+    // }
+}
+
+
+.button-up {
+  border-width: 2px;
+  border-style: inset;
+}
+
+.button-down {
+  border-width: 2px;
+  border-style: outset;
+}
+
+
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+$a-tags-visited: 'a:visited';
+ 
+
+a {
+  color: red;
+  // text-decoration: none;
+  // padding: 15px;
+  // font-family: monospace;
+  // // @extend .button-up;
+
+// }
+// #{$a-tags-hover} {
+//   color: blue;
+// }
+
+// #{$a-tags-visited} {
+//   color: green;
+}
+
+
+

@@ -1,0 +1,66 @@
+$min_width: $phone;
+$max_width: 1500px;
+$min_font: 20px;
+$max_font: 28px;
+
+
+body {
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+  h1 {
+    $max_font: 70px;
+    $min_font: 55px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+
+
+}
+h1 {
+  font-weight: normal;
+  line-height: 0.7em;
+}
+h3 {
+    $max_font: 32px;
+    $min_font: 25px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    font-weight: normal;
+}
+h4 {
+  // margin-top: 1em;
+}
+p {
+  margin-top: 0em;
+  margin-bottom: 0.7em;
+}
+
+// ----------------------------
+//          Quotes
+// ----------------------------
+
+blockquote {
+  $min_width: 600px;
+  $min_font: 21px;
+  $max_width: 1500px;
+  $max_font: 50px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+  margin: 0;
+  font-style: italic;
+  line-height: 1.2em;
+
+  p {
+    margin: 0;
+  }
+  + p {
+    // margin-top: 0.3em;
+  }
+}
+
+ul {
+  margin: 0;
+  // padding-left: 1em;
+  li {
+    line-height: 1.3em;
+  }
+}

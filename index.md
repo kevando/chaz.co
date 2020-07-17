@@ -1,22 +1,25 @@
 ---
 layout: default
-title: Moments of Empathy
+title: Chaz Teaches Empathy
 description: A collection of links, videos, and stories that demonstrate the profound impact of empathy.
+body: homepage
+image: /assets/images/dna.jpg
 ---
 
-<div class="moments">
+# Chaz
 
-<h1 class="title">Moments of Empathy</h1>
-<br />
+### We teach internet basics that do no get traditionally taught. That's because there isn't much traditional about the internet.
 
+---
 
-<div>
-    {%- for moment in site.moments reversed -%} 
-        {%- include list-item-moment.md moment=moment -%}    
-    {%- endfor -%}
+### Take the Empathy Test
+(*coming soon*)
 
-    
-</div>
+### Check out [Moments of Empathy](/moments-of-empathy) 
 
+### ![Icon]({{ site.icon32}})
 
-{%- include nav.md -%}
+---
+
+- [Questions](/questions)
+- [Cool Information](/cool-information)

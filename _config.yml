@@ -1,17 +1,28 @@
 
-# Site Settings
-title: Moments of Empathy
+# title: Moments of Empathy
 description: It's nice to be your neighbor.
 baseurl: "/" 
 url: "https://chaz.co" 
+images_url: "/assets/images"
+
+# Icon Images
+icon16: /assets/favicon/favicon-16x16.png
+icon32: /assets/favicon/favicon-32x32.png
+icon256: /assets/favicon/apple-touch-icon-256.png
 
 # SEO
 google_analytics: UA-89282611-1
 
-# CMS
+
+# ----------------------------
+#       Collections
+# ----------------------------
+
+collections_dir: collections
 collections:
   moments:
     output: true
+
 
 defaults:
   -
@@ -24,7 +35,7 @@ defaults:
       twitter_title: Moments of Empathy
       twitter_description: A collection of people demonstrating deep understanding 
       twitter_image: https://chaz.co/assets/images/skinner.png
-      facebook_title: Moments of Great Empathy
+      facebook_title: Moments of Empathy
       facebook_description:
       facebook_image: https://chaz.co/assets/images/skinner.png
 

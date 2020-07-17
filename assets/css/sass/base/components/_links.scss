@@ -1,0 +1,59 @@
+
+a {
+  &:visited {
+    // color: $purple;
+  }
+}
+
+
+.button-down {
+  border-width: 2px;
+  border-style: inset;
+  border-color: white;
+}
+
+.button-up {
+  border-width: 2px;
+  border-style: outset;
+}
+
+
+
+$a-tags-all: 'a, a:active, a:hover, a:visited';
+$a-tags-link: 'a:link';
+$a-tags-hover: 'a:active, a:hover';
+
+$a-tags-visited: 'a:visited';
+
+.test{
+
+#{$a-tags-all} {
+
+  padding: 10px;
+  border-style: solid;
+  // border-color: grey;
+
+}
+
+#{$a-tags-link} {
+  color: blue;
+  text-decoration: none;
+
+  + a {
+    // border-color: white;
+  }
+}
+#{$a-tags-hover} {
+  border-color: black;
+}
+
+#{$a-tags-visited} {
+  text-decoration: underline;
+  color: purple;
+  // border-color: black;
+  + a {
+    border-color: black;
+  }
+}
+
+}
