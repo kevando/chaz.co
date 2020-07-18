@@ -1,0 +1,12 @@
+---
+title: Moments of Empathy
+description: People practicing empathy on the internet
+permalink: /moments-of-empathy
+body: moments
+---
+
+<h1>Moments of Empathy</h1>
+
+{%- for moment in site.moments reversed -%}
+    {%- include list-item-moment.md moment=moment -%}
+{%- endfor -%}

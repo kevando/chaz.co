@@ -1,17 +1,286 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 14 |   "components/links",
- *    |   ^^^^^^^^^^^^^^^^^^
- *    '
- *   assets/css/sass/main.scss 14:3  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 14 \2502    \"components/links\",\a    \2502    ^^^^^^^^^^^^^^^^^^\a    \2575 \a   assets/css/sass/main.scss 14:3  root stylesheet";
+html {
+  box-sizing: border-box;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+body {
+  font-size: 20px;
+}
+@media screen and (min-width: 599px) {
+  body {
+    font-size: calc(20px + 8 * ((100vw - 599px) / 901));
+  }
+}
+@media screen and (min-width: 1500px) {
+  body {
+    font-size: 28px;
+  }
+}
+body h1 {
+  font-size: 55px;
+}
+@media screen and (min-width: 599px) {
+  body h1 {
+    font-size: calc(55px + 15 * ((100vw - 599px) / 901));
+  }
+}
+@media screen and (min-width: 1500px) {
+  body h1 {
+    font-size: 70px;
+  }
+}
+
+h1 {
+  font-weight: normal;
+  line-height: 0.7em;
+}
+
+h3 {
+  font-weight: normal;
+}
+h3 {
+  font-size: 25px;
+}
+@media screen and (min-width: 599px) {
+  h3 {
+    font-size: calc(25px + 7 * ((100vw - 599px) / 901));
+  }
+}
+@media screen and (min-width: 1500px) {
+  h3 {
+    font-size: 32px;
+  }
+}
+
+p {
+  margin-top: 0em;
+  margin-bottom: 0.7em;
+}
+
+blockquote {
+  margin: 0;
+  font-style: italic;
+  line-height: 1.3em;
+}
+blockquote {
+  font-size: 26px;
+}
+@media screen and (min-width: 600px) {
+  blockquote {
+    font-size: calc(26px + 24 * ((100vw - 600px) / 900));
+  }
+}
+@media screen and (min-width: 1500px) {
+  blockquote {
+    font-size: 50px;
+  }
+}
+blockquote p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 30px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+h2 + h3 {
+  margin-bottom: 0;
+}
+
+h2 + p {
+  margin-top: 10px;
+}
+
+h3 + p {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+}
+ul li {
+  line-height: 1em;
+  margin-bottom: 10px;
+}
+
+ol {
+  margin: 0;
+}
+ol li {
+  line-height: 1.5em;
+}
+
+.content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body > hr {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+body > .footer {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.header a.logo {
+  display: inline-block;
+}
+.header a.logo img {
+  padding-top: 10px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.moments h1 {
+  text-shadow: 2px 1px #000, 3px 2px #000, 4px 3px #000, -1px -1px #000, -1px 1px #000, 1px -1px #000;
+  color: #f5d80c;
+  font-weight: bold;
+  line-height: 1.1em;
+}
+
+.moment.item {
+  display: block;
+  unicode-bidi: isolate;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 4px;
+  margin: 0 0 4rem 0;
+  max-width: 400px;
+}
+.moment.item.video {
+  display: block;
+  unicode-bidi: isolate;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 21px;
+  max-width: 400px;
+}
+.moment.item .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.moment.item .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.moment.item.quote {
+  max-width: 600px;
+  padding: 1em 1em;
+}
+.moment.item.image {
+  padding: 1em 1em;
+  display: block;
+  unicode-bidi: isolate;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  background: #ffffff24;
+}
+.moment.item.image p {
+  margin: 0;
+}
+.moment.item.image img {
+  border: solid 1px #5959596b;
+}
+
+body {
+  background-color: #C0C0C0;
+}
+
+.button-down {
+  border-width: 2px;
+  border-style: inset;
+  border-color: white;
+}
+
+.button-up {
+  border-width: 2px;
+  border-style: outset;
+}
+
+.test a, .test a:active, .test a:hover, .test a:visited {
+  padding: 10px;
+  border-style: solid;
+}
+.test a:link {
+  color: blue;
+  text-decoration: none;
+}
+.test a:active, .test a:hover {
+  border-color: black;
+}
+.test a:visited {
+  text-decoration: underline;
+  color: purple;
+}
+.test a:visited + a {
+  border-color: black;
+}
+
+/*# sourceMappingURL=main.css.map */

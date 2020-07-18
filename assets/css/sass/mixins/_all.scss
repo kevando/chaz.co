@@ -13,30 +13,6 @@
   transition: $args;
 }
 
-// TEXT
-
-@mixin text-shadow($color, $size: 1) {
-  $value: ();
-  @for $i from 1 through $size {
-    $v: $i + px;
-    $h: $i + 1 + px;
-    $theShadow: $h $v $color;
-    $value: append($value, $theShadow, comma);
-  }
-
-  // Add border
-  $theShadow: -1px -1px $color;
-  $value: append($value, $theShadow, comma);
-
-  $theShadow: -1px 1px $color;
-  $value: append($value, $theShadow, comma);
-
-  $theShadow: 1px -1px $color;
-  $value: append($value, $theShadow, comma);
-
-  text-shadow: $value;
-}
-
 // BORDERS
 
 @mixin inset-border($bw: 2px) {

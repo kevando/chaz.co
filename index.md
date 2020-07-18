@@ -8,18 +8,25 @@ image: /assets/images/dna.jpg
 
 # Chaz
 
-### We teach internet basics that do no get traditionally taught. That's because there isn't much traditional about the internet.
+### Learn The Basic Internet
 
 ---
 
-### Take the Empathy Test
+### Internet 101
 (*coming soon*)
 
-### Check out [Moments of Empathy](/moments-of-empathy) 
+<!-- ### [Internet 101](/internet-101) -->
 
-### ![Icon]({{ site.icon32}})
+### [Moments of Empathy](/moments-of-empathy) 
 
----
+### Algorithms
+(*coming soon*)
 
-- [Questions](/questions)
-- [Cool Information](/cool-information)
+<!-- ### [Algorithms](/algorithms) -->
+
+<!-- ### [Empathy Handshake](/questions) -->
+
+<!-- ### [Cool Information](/cool-information) -->
+
+### Empathy Test
+(*coming soon*)

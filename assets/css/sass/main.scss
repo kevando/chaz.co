@@ -6,11 +6,10 @@
 
 @import 
   "layout/spacing", 
+  "layout/header",
   "layout/footer", 
   "layout/pages",
   "layout/theme";
 
 @import 
-  "components/links",
-  "components/emoji",
-  "components/moments";
+  "components/links";
