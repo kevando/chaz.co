@@ -1,15 +1,10 @@
 ---
-title: Internet 101
-permalink: /internet-101
+title: About Chaz 
+permalink: /about
 body: internet-101
 ---
 
-# Internet 101
-
- - Where did the internet come from?
- - Is it okay to be mean?
- - [Rules of the road](/rules-for-the-internet)
- - Internet basics for everyone!
+### [Chaz](/)
 
 ---
 

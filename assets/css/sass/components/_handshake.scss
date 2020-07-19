@@ -1,47 +1,20 @@
 .handshake {
-  h1 {
-    text-align: center;
-  }
-  hr {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-}
 
-.handshake-steps {
+  h2 {
 
-  .step-row {
-    display: flex;
-    // background-color: yellow;
-    justify-content: space-between;
-    align-items: center;
-    span {
-      display: flex;
-      font-family: monospace;
-
-      
-      margin: 0px;
-
-      &.left {
-        padding: 5px;
-        z-index: 10;
-        // border: solid 5px green;
-        @include text-shadow(green, 6px);
-      }
-      &.connection {
-        flex-grow:1;
-        border-bottom: solid 6px yellow;
-        margin-top: 3px;
-        margin-left: -12px;
-        margin-right: -12px;
-      }
-      &.right {
-        z-index: 10;
-        padding: 5px;
-
-        @include text-shadow(green, 6px);
-      }
+    font-weight: bold;
+    // text-align-last: justify;
+    // text-align:right;
+    font-family: monospace;
+   
+    &:nth-of-type(1) {
+      text-align:left;
+    }
+    &:nth-of-type(2) {
+      text-align:right;
+    }
+    &:nth-of-type(3) {
+      text-align:right;
     }
   }
-
 }
