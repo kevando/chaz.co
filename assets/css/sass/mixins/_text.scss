@@ -22,3 +22,25 @@
 
   text-shadow: $value;
 }
+
+@mixin emoji-shadow($color, $size: 1) {
+  $value: ();
+  // @for $i from 1 through $size {
+  //   $v: $i + px;
+  //   $h: $i + 2 + px;
+  //   $theShadow: $h $v $color;
+  //   $value: append($value, $theShadow, comma);
+  // }
+
+  // Add border
+  $theShadow: 5px -1px 10px $color;
+  $value: append($value, $theShadow, comma);
+
+  $theShadow: -5px 1px 10px $color;
+  $value: append($value, $theShadow, comma);
+
+  $theShadow: 1px -5px 10px $color;
+  $value: append($value, $theShadow, comma);
+
+  text-shadow: $value;
+}

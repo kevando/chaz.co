@@ -1,20 +1,16 @@
 ---
 layout: handshake
 permalink: /empathy-handshake/tcp
-title: Empathy Handshake
+title: TCP Handshake
 
-current_step: 1
+left_icon: 🤖
+right_icon: 🤖
 
----
+status: none
 
-## TCP Handshake
+next:  /empathy-handshake/tcp-ready
 
-How two servers establish a connection on the internet. 
-
----
-
-# 🤖 &nbsp;  🤖
 
 ---
 
-### [Begin](/empathy-handshake/tcp-send)
+Let's take a look at how these robots got connected.

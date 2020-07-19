@@ -1,0 +1,167 @@
+.handshake {
+  h2 {
+    text-align: center;
+  }
+  .action {
+    &.right {
+      // color: orange!important;
+      text-align: right;
+    }
+    &.receive {
+      // color: orange!important;
+      text-align: right;
+    }
+    a {
+      text-transform: capitalize;
+      // color: red !important;
+      &.receive {
+        // color: orange!important;
+
+      }
+    }
+  }
+
+  .handshake-steps {
+    .step-row {
+      display: flex;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      // background-color: red;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        display: flex;
+        font-family: monospace;
+        font-size: 70px;
+        margin: 0px;
+
+        // ---------
+        //   LEFT
+        // ---------
+        &.left {
+          padding: 5px;
+          z-index: 10;
+          border-width: 3px;
+          &.complete {
+            @include text-shadow($green, 6px);
+          }
+          &.send {
+            border-color: $yellow;
+            border-style: solid;
+            background-color: $yellow;
+          }
+        }
+         // ---------
+        //   LEFT
+        // ---------
+        &.right {
+          z-index: 10;
+          padding: 5px;
+
+          &.receive {
+            border-color: $yellow;
+            border-style: solid;
+            background-color: $yellow;
+          }
+          
+
+          &.ready {
+            @include emoji-shadow($blue, 6px);
+          }
+
+          &.complete {
+            @include text-shadow($green, 6px);
+          }
+        }
+        // ------------------
+        //   Connection
+        // ------------------
+        &.connection {
+          position: relative;
+          flex-grow: 1;
+
+          border-top-width: 7px;
+          // border-bottom-width: 5px;
+
+          margin-top: 3px;
+          margin-left: 20px;
+          margin-right: 20px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            font-size: 51px;
+            font-weight: bold;
+            bottom: -33px;
+            @include for-phone-only {
+              bottom: -38px;
+            }
+            // color: $yellow;
+            font-family: monospace;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            right: -5px;
+            font-size: 51px;
+            font-weight: bold;
+            bottom: -32px;
+            color: $yellow;
+            font-family: monospace;
+
+            @include for-phone-only {
+              bottom: -28px;
+            }
+          }
+
+          &.complete {
+            border-color: $green;
+            border-style: solid;
+          }
+
+          &.send {
+            border-top-color: $yellow;
+            border-top-style: solid;
+            &::after {
+              content: ">";
+            }
+          }
+          &.receive {
+            border-top-color: $red;
+            border-top-style: solid;
+          }
+          &.acknowledges {
+            border-top-color: $yellow;
+            border-top-style: solid;
+            border-bottom-color: $blue;
+            border-bottom-style: dashed;
+            &::before {
+              content: "<";
+            }
+          }
+
+          &.acknowledge-receive {
+            border-top-color: $yellow;
+            border-top-style: solid;
+            border-bottom-color: $blue;
+            border-bottom-style: solid;
+          }
+          &.connection-send {
+            border-top-color: $yellow;
+            border-top-style: solid;
+            border-bottom-color: $blue;
+            border-bottom-style: solid;
+          }
+          &.connection-receive {
+            border-top-color: $green;
+            border-top-style: solid;
+            border-bottom-color: $green;
+            border-bottom-style: solid;
+          }
+        }
+        
+      }
+    }
+  }
+}

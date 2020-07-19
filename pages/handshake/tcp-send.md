@@ -1,17 +1,13 @@
 ---
 layout: handshake
 permalink: /empathy-handshake/tcp-send
-title: TCP Handshake | Send
-
-current_step: 1
-
+title: TCP Handshake
 left_icon: 🤖
 right_icon: 🤖
 
-next: /empathy-handshake/tcp-receive
+status: send
+action_name: receive
+action_side: right
+next:  /empathy-handshake/tcp-receive
 ---
 
-
-### Robot 1 [sends]({{ page.next }}) a packet.
-
----

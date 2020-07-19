@@ -1,6 +1,6 @@
 ---
 layout: handshake
-permalink: /empathy-handshake/tcp-connection
+permalink: /empathy-handshake/tcp-connection-complete
 title: Connection
 
 current_step: 1
