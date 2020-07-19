@@ -8,25 +8,22 @@ image: /assets/images/dna.jpg
 
 # Chaz
 
-### Learn The Basic Internet
+### Learn Internet Basics
 
 ---
 
-### Internet 101
-(*coming soon*)
 
-<!-- ### [Internet 101](/internet-101) -->
+### [Internet 101](/internet-101)
 
 ### [Moments of Empathy](/moments-of-empathy) 
 
-### Algorithms
-(*coming soon*)
 
-<!-- ### [Algorithms](/algorithms) -->
 
-<!-- ### [Empathy Handshake](/questions) -->
+### [Algorithms](/algorithms)
 
-<!-- ### [Cool Information](/cool-information) -->
+### [Empathy Handshake](/empathy-handshake)
+
+### [Cool Information](/cool-information)
 
 ### Empathy Test
 (*coming soon*)

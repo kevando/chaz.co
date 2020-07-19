@@ -1,11 +1,11 @@
 
-
+// TEXT
 
 @mixin text-shadow($color, $size: 1) {
   $value: ();
   @for $i from 1 through $size {
     $v: $i + px;
-    $h: $i + 1 + px;
+    $h: $i + 2 + px;
     $theShadow: $h $v $color;
     $value: append($value, $theShadow, comma);
   }
