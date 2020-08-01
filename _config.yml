@@ -1,11 +1,10 @@
-
-# title: Moments of Empathy
+# Basic 
+title: Chaz
 description: It's nice to be your neighbor.
 baseurl: "/" 
 url: "https://chaz.co" 
-images_url: "/assets/images"
 
-# Icon Images
+# Images
 icon16: /assets/favicon/favicon-16x16.png
 icon32: /assets/favicon/favicon-32x32.png
 icon256: /assets/favicon/apple-touch-icon-256.png
@@ -19,10 +18,6 @@ google_analytics: UA-89282611-1
 # ----------------------------
 
 collections_dir: collections
-collections:
-  moments:
-    output: true
-
 
 defaults:
   -
@@ -30,7 +25,7 @@ defaults:
       path: "" # all files
       type: pages
     values:
-      layout: "default"
+      layout: "basic"
       description: For chazzy people.
       twitter_title: Moments of Empathy
       twitter_description: A collection of people demonstrating deep understanding 

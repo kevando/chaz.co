@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body class="computer-chronicles">
+
+    <h4>WELCOME TO</h4>
+
+    <h1 class="bottom">{{ page.title_bottom }}</h1>
+    <h1 class="top">{{ page.title_top }}</h1>
+
+
+
+    <div class="content">
+
+    {%- for moment in site.moments reversed -%}
+    {%- include list-item-moment.md moment=moment -%}
+{%- endfor -%}
+    {{ content }}
+  </div>
+
+  
+  </body>
+</html>

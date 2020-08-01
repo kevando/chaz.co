@@ -6,10 +6,8 @@
   "mixins/responsive", 
   "mixins/text";
 
-@import 
-  "base/normalize", 
-  "base/typography"
-  ;
+@import "base/normalize";
+@import "typography";
 
 @import 
   "layout/spacing", 
@@ -18,6 +16,9 @@
   "layout/pages",
   "layout/theme";
 
-@import 
-  "components/links", 
-  "components/handshake";
+// @import 
+  // "components/links", 
+  // "components/handshake";
+
+
+

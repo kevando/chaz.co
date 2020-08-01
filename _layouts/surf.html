@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  {%- assign body_class = page.body | default: page.layout -%}
+
+  <body class="{{ body_class }}">
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+        {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+    
+  </body>
+
+  {%- include after_body.html -%}
+
+</html>

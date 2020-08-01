@@ -30,16 +30,28 @@ h1, h2, h3, h4, h5, p {
   line-height: 1em;
 }
 
+h1:first-child {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+h1:first-child + h2 {
+  margin-top: 0;
+}
+
+h4 {
+  font-weight: bold;
+}
+
 blockquote {
   margin: 0;
   font-style: italic;
 }
 blockquote {
-  font-size: 24px;
+  font-size: 18px;
 }
 @media screen and (min-width: 600px) {
   blockquote {
-    font-size: calc(24px + 26 * ((100vw - 600px) / 900));
+    font-size: calc(18px + 32 * ((100vw - 600px) / 900));
   }
 }
 @media screen and (min-width: 1500px) {
@@ -79,23 +91,6 @@ hr {
 }
 .header a.logo img {
   padding-top: 10px;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex-shrink: 0;
 }
 
 .moments h1 {
@@ -171,50 +166,6 @@ body {
 
 body {
   background-color: #C0C0C0;
-}
-
-.button-down {
-  border-width: 2px;
-  border-style: inset;
-  border-color: white;
-}
-
-.button-up {
-  border-width: 2px;
-  border-style: outset;
-}
-
-.test a, .test a:active, .test a:hover, .test a:visited {
-  padding: 10px;
-  border-style: solid;
-}
-.test a:link {
-  color: blue;
-  text-decoration: none;
-}
-.test a:active, .test a:hover {
-  border-color: black;
-}
-.test a:visited {
-  text-decoration: underline;
-  color: purple;
-}
-.test a:visited + a {
-  border-color: black;
-}
-
-.handshake h2 {
-  font-weight: bold;
-  font-family: monospace;
-}
-.handshake h2:nth-of-type(1) {
-  text-align: left;
-}
-.handshake h2:nth-of-type(2) {
-  text-align: right;
-}
-.handshake h2:nth-of-type(3) {
-  text-align: right;
 }
 
 /*# sourceMappingURL=main.css.map */
