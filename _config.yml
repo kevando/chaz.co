@@ -1,23 +1,28 @@
-# Basic 
 title: Chaz
 description: It's nice to be your neighbor.
 baseurl: "/" 
 url: "https://chaz.co" 
 
-# Images
+
+# Icons
 icon16: /assets/favicon/favicon-16x16.png
 icon32: /assets/favicon/favicon-32x32.png
 icon256: /assets/favicon/apple-touch-icon-256.png
 
-# SEO
+# Other urls
+shared_assets_url: https://kevando.github.io/assets
+
+
 google_analytics: UA-89282611-1
+email: khabich@gmail.com
+twitter: kevando_
 
 
-# ----------------------------
-#       Collections
-# ----------------------------
 
 collections_dir: collections
+collections:
+  moments:
+    output: false
 
 defaults:
   -

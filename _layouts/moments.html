@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="moments-of-empathy">
+
+    {{ content }}
+
+    <!-- Collection -->
+    <div class="moments">
+
+      <!-- Banner Image -->
+      <div class="moment image">
+        <img src="{{ page.image }}" alt="{{ page.description }}"/>
+      </div>
+
+      <!-- And the rest -->
+      {% for moment in site.moments %}
+        <div class="moment {{ moment.class }}">
+        
+          {% if moment.image %}
+            <div class="image-wrapper">
+              <img src="{{ moment.image }}" alt="{{ moment.title }}" />
+            </div>
+          {% endif %}
+
+          {{ moment.content }}
+        </div>
+        
+      {% endfor %}
+    </div>
+    
+  </body>
+
+
+</html>

@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-// Define defaults for each variable.
-
+// Everything is based loosely off the minima theme
 
 // -------- Typography --------
 
@@ -10,8 +9,6 @@ $base-font-size:   20px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
-
-
 
 // -------- Colors --------
 
@@ -28,7 +25,7 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 $spacing-unit:     30px !default;
 $table-text-align: left !default;
 
-$content-width:    1800px !default;
+$content-width:    800px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
@@ -50,6 +47,8 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
+// -------- Import the goods --------
 
 @import "surf/base", "surf/typography", "surf/layout";
 @import "surf/button", "surf/power-point";
+@import "chaz/moments-of-empathy";

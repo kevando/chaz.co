@@ -20,6 +20,29 @@ figure {
   padding: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:focus {
+  outline: none;
+}
+body {
+  margin: 0;
+}
+// img {
+//   max-width: 100%;
+// }
+hr {
+  // For Flexbox
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /**
   * Basic styling
   */
@@ -119,21 +142,6 @@ a {
   }
 }
 
-/**
-  * Blockquotes
-  */
-blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
-  @include relative-font-size(1.125);
-  letter-spacing: -1px;
-  font-style: italic;
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
 
 
 /**
@@ -142,8 +150,8 @@ blockquote {
 .wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
+  // margin-right: auto;
+  // margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;
