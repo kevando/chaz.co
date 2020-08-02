@@ -20,6 +20,11 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
+$purple-color: #390774;
+$purple-color-dark: darken($purple-color, 5%) !default;
+$magenta-color: #6a0982;
+$magenta-color-light: lighten($magenta-color, 5%);
+
 // -------- Content Area --------
 
 $spacing-unit:     30px !default;

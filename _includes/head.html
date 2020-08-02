@@ -1,6 +1,12 @@
 {% assign title=page.title %}
+
 {% assign facebook_image=page.facebook.image | default: page.image %}
+{% assign facebook_title=page.facebook.title | default: page.title %}
+{% assign facebook_description=page.facebook.description | default: page.description %}
+
 {% assign twitter_image=page.twitter.image | default: page.image %}
+{% assign twitter_title=page.twitter.title | default: page.title %}
+{% assign twitter_description=page.twitter.description | default: page.description %}
 
 <head>
   <meta charset="utf-8" />
@@ -24,14 +30,14 @@
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="{{ site.twitter_card_style }}" />
   <meta name="twitter:site" content="{{ site.twitter_handle }}" />
-  <meta name="twitter:title" content="{{ page.twitter.title}}" />
-  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:title" content="{{ twitter_title}}" />
+  <meta name="twitter:description" content="{{ twitter_description }}" />
   <meta name="twitter:image" content="{{ twitter_image }}" />
 
   <!-- Facebook Preview Tags -->
   <meta property="og:url" content="https://chaz.co" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="{{ page.facebook.title}}" />
+  <meta property="og:title" content="{{ facebook_title}}" />
   <meta property="og:description" content="{{ facebook_description }}" />
   <meta property="og:image" content="{{ facebook_image }}" />
 

@@ -6,10 +6,48 @@
   }
 }
 
+
+@function generate-random-stars ($screen-width, $color, $density){
+  
+  $h-shadow: random($screen-width);
+  $v-shadow: random($screen-width);
+  
+  $stars: '#{$h-shadow}px #{$v-shadow}px #{$color}';
+	@for $i from 2 through $density {
+      $h-shadow: random($screen-width);
+      $v-shadow: random($screen-width);
+    
+    $stars: '#{$stars}, #{$h-shadow}px #{$v-shadow}px #{$color}';
+	}
+	@return unquote($stars);
+}
+
+@mixin stars-content($screen-width, $color, $density, $speed, $delay) {
+  width: 2px;
+  height: 2px;
+	border-radius: 50%;
+	opacity: 0;
+	box-shadow: generate-random-stars($screen-width, $color, $density);
+	animation-name: glowing-stars;
+  animation-duration: $speed+s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-delay: $delay+s;
+}
+
+
+@keyframes glowing-stars {
+  0%   {opacity: 0.4;}
+  50%  {opacity: 1;}
+  100% {opacity: 0.6;}
+}
+
 // --------------------------------------------------
 
 $purple: #9a00a4;
-$yellow: yellow;
+$yellow: rgb(255, 238, 0);
+$yellow-color-light:rgba(255, 238, 0, 0.548);
 $green: #49ff00;
 
 $spacing-unit: 10vw;
@@ -20,44 +58,74 @@ $spacing-unit: 10vw;
   font-family: Arial Black, Gadget, sans-serif;
   color: $yellow;
   text-align: center;
-}
-.quote {
-  font-family: Courier New;
-  color: white;
-  font-weight: 100;
-  padding: 3vw 3vh;
-  max-width: 600px;
-  p {
-    line-height: 1.2em;
-  }
-}
-.link {
-  color: $green;
-  font-weight: 800;
+  margin-bottom: $spacing-unit;
 }
 
+.text {
+  font-family: Arial, Gadget, sans-serif;
+  color: white;
+}
+.quote {
+  font-family: Courier;
+  border: none;
+  color: rgba(255, 255, 255, 0.774);
+  font-weight: 100;
+  padding: 1em;
+  line-height: 1.4em;
+  
+}
+.link {
+  font-family: Arial, Gadget, sans-serif;
+  text-decoration: none;
+  color: $green;
+  font-weight: 400;
+  line-height: 3em;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.gradient-background {
+  background-color: $purple-color-dark;
+  background-image: linear-gradient($purple-color-dark 0vh, $purple-color-dark 60vh, $magenta-color 100vh, $magenta-color 90%, $purple-color-dark 100%);
+}
 // --------------------------------------------------
 
 body.moments-of-empathy {
   @include reset();
-  background-color: $purple;
-
+  @extend .gradient-background;
+  padding-top: 40px;
   h1 {
     @extend .title;
     font-size: calc(26px + 9vw);
-    margin-bottom: $spacing-unit;
+    text-shadow: $yellow 1px 0px 0px,$yellow 1px 1px 0px,$yellow -1px 0px 0px,$yellow 0px -1px 0px;
+    margin-bottom: 40px;
   }
   h2 {
     @extend .title;
-    font-size: calc(26px + 2.5vw);
-    margin-top: $spacing-unit;
+    font-size: calc(26px + 4.5vw);
+    margin-bottom: 10px;
   }
-
+  h4 {
+    @extend .text;
+    font-size: calc(16px + 0.5vw);
+  }
   blockquote {
     @extend .quote;
   }
   a {
     @extend .link;
+  }
+
+  .content {
+    text-align: center;
+    margin-bottom: 25vh;
+    img {
+      border: 4px #ffffff;
+      border-style: solid;
+      max-width: 90vw;
+
+    }
   }
 
   // Layout
@@ -67,8 +135,7 @@ body.moments-of-empathy {
     justify-content: center;
 
     .moment {
-      min-width: 50vw;
-      max-width: 90vw;
+      min-width: 30vw;
       margin: 0 3vw 10vw 3vw;
 
       &.image {
@@ -83,20 +150,37 @@ body.moments-of-empathy {
       .image-wrapper {
         max-width: 70vw;
       }
+      .quote-wrapper {
+        border: solid 3px $yellow;
+        max-width: 400px;
+      }
     }
   }
 }
 
+
+.stars-background {
+  @include stars-content(1800, $yellow, 100, 4, 2);
+  position: absolute;
+}
 // --------------------------------------------------
 
 @include media-query($on-palm) {
   body.moments-of-empathy {
     h1 {
       font-weight: bold;
+      font-size: calc(16px + 15.5vw);
     }
     h2 {
-      font-size: calc(6px + 4.5vw);
+      font-size: calc(16px + 4.5vw);
       font-weight: bold;
+      
     }
   }
 }
+
+
+
+
+
+

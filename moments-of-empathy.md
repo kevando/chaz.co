@@ -13,3 +13,6 @@ twitter:
 # EMPATHY
 
 <!-- The internet's scarcest resrouce. -->
+
+![Bart and Skinner]({{ page.image }})
+

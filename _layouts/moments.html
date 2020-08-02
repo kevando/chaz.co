@@ -5,17 +5,20 @@
 
   <body class="moments-of-empathy">
 
-    {{ content }}
+    <div class="content">
+      {{ content }}
+  </div>  
 
-    <!-- Collection -->
+
+    <!-- List of Items -->
     <div class="moments">
 
       <!-- Banner Image -->
-      <div class="moment image">
+      <!-- <div class="moment image">
         <img src="{{ page.image }}" alt="{{ page.description }}"/>
-      </div>
+      </div> -->
 
-      <!-- And the rest -->
+      <!-- Iterate over the collection -->
       {% for moment in site.moments %}
         <div class="moment {{ moment.class }}">
         
@@ -25,12 +28,23 @@
             </div>
           {% endif %}
 
+          {% if moment.quote %}
+            <div class="quote-wrapper">
+              <blockquote>{{ moment.quote }}</blockquote>
+            </div>
+          {% endif %}
+
+          {% if moment.source %}
+            <p><a href="{{ moment.source }}">{{ moment.author }}</a></p>
+          {% endif %}
+
           {{ moment.content }}
         </div>
         
       {% endfor %}
     </div>
     
+    <div class="stars-background"></div>
   </body>
 
 
