@@ -1,7 +1,10 @@
 ---
 layout: surf
 name: empathy
-slug: /what-is-empathy
+title: What is Empathy?
+description: >
+     "Humanity's future depends on empathy" - Stephen Hawking
+image: https://chaz.co/assets/images/empathy_houses.jpg
 ---
 
 # **Empathy**
