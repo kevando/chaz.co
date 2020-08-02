@@ -9,14 +9,8 @@
       {{ content }}
   </div>  
 
-
     <!-- List of Items -->
     <div class="moments">
-
-      <!-- Banner Image -->
-      <!-- <div class="moment image">
-        <img src="{{ page.image }}" alt="{{ page.description }}"/>
-      </div> -->
 
       <!-- Iterate over the collection -->
       {% for moment in site.moments %}
@@ -26,16 +20,6 @@
             <div class="image-wrapper">
               <img src="{{ moment.image }}" alt="{{ moment.title }}" />
             </div>
-          {% endif %}
-
-          {% if moment.quote %}
-            <div class="quote-wrapper">
-              <blockquote>{{ moment.quote }}</blockquote>
-            </div>
-          {% endif %}
-
-          {% if moment.source %}
-            <p><a href="{{ moment.source }}">{{ moment.author }}</a></p>
           {% endif %}
 
           {{ moment.content }}
