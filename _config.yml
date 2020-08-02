@@ -3,21 +3,20 @@ description: It's nice to be your neighbor.
 baseurl: "/" 
 url: "https://chaz.co" 
 
-
 # Icons
 icon16: /assets/favicon/favicon-16x16.png
 icon32: /assets/favicon/favicon-32x32.png
 icon256: /assets/favicon/apple-touch-icon-256.png
 
-# Other urls
 shared_assets_url: https://kevando.github.io/assets
 
-
 google_analytics: UA-89282611-1
+
 email: khabich@gmail.com
-twitter: kevando_
+twitter_handle: kevando_
 
-
+# Images
+simpsons_banner: https://chaz.co/assets/moments-of-empathy/bart-and-skinner.jpg
 
 collections_dir: collections
 collections:
@@ -31,13 +30,11 @@ defaults:
       type: pages
     values:
       layout: "basic"
-      description: For chazzy people.
-      twitter_title: Moments of Empathy
-      twitter_description: A collection of people demonstrating deep understanding 
-      twitter_image: https://chaz.co/assets/images/skinner.png
-      facebook_title: Moments of Empathy
-      facebook_description:
-      facebook_image: https://chaz.co/assets/images/skinner.png
+      twitter:
+        title: Moments of Empathy
+      facebook:
+        title: Chaz | Moments of Empathy
+      
 
 
 # Build settings

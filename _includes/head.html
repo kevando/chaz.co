@@ -1,13 +1,17 @@
+{% assign title=page.title %}
+{% assign facebook_image=page.facebook.image | default: page.image %}
+{% assign twitter_image=page.twitter.image | default: page.image %}
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   
   <!-- Title -->
-  <title>{{ page.title }}</title>
+  <title>{{ title }}</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/main.css" />
+  <link rel="stylesheet" href="/assets/main.css" />
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.icon256 }}" />
@@ -19,17 +23,17 @@
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@kevando_" />
-  <meta name="twitter:title" content="{{ page.twitter_title}}" />
-  <meta name="twitter:description" content="{{ page.twitter_description }}" />
-  <meta name="twitter:image" content="{{ page.twitter_image }}" />
+  <meta name="twitter:site" content="{{ site.twitter_handle }}" />
+  <meta name="twitter:title" content="{{ page.twitter.title}}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:image" content="{{ twitter_image }}" />
 
   <!-- Facebook Preview Tags -->
   <meta property="og:url" content="https://chaz.co" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="{{ page.facebook_title}}" />
-  <meta property="og:description" content="{{ page.facebook_description }}" />
-  <meta property="og:image" content="{{ page.facebook_image }}" />
+  <meta property="og:title" content="{{ page.facebook.title}}" />
+  <meta property="og:description" content="{{ facebook_description }}" />
+  <meta property="og:image" content="{{ facebook_image }}" />
 
   {%- include google-analytics.html -%}
 </head>

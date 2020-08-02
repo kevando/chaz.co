@@ -2,9 +2,11 @@
 layout: moments
 permalink: /
 title: Moments of Empathy
-description: Rare findings of the internet's most elusive and scarce resource.
+description: Rare findings of the most elusive resource on the internet.
 body: moments-of-empathy
-image: /assets/moments-of-empathy/bart-and-skinner.jpg
+image:  https://chaz.co/assets/moments-of-empathy/bart-and-skinner.jpg
+twitter:
+  image: https://chaz.co/assets/moments-of-empathy/bart-and-skinner.jpg
 ---
 
 ## Moments of 
