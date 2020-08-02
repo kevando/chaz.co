@@ -1,3 +1,13 @@
+
+$purple: #9a00a4;
+$yellow: rgb(255, 238, 0);
+$yellow-color-light: rgba(255, 238, 0, 0.548);
+$green: #49ff00;
+
+$spacing-unit: 7vh;
+
+// --------------------------------------------------
+
 @mixin reset() {
   * {
     padding: 0;
@@ -6,59 +16,55 @@
   }
 }
 
-
-@function generate-random-stars ($screen-width, $color, $density){
-  
+@function generate-random-stars($screen-width, $color, $density) {
   $h-shadow: random($screen-width);
   $v-shadow: random($screen-width);
-  
-  $stars: '#{$h-shadow}px #{$v-shadow}px #{$color}';
-	@for $i from 2 through $density {
-      $h-shadow: random($screen-width);
-      $v-shadow: random($screen-width);
-    
-    $stars: '#{$stars}, #{$h-shadow}px #{$v-shadow}px #{$color}';
-	}
-	@return unquote($stars);
+
+  $stars: "#{$h-shadow}px #{$v-shadow}px #{$color}";
+  @for $i from 2 through $density {
+    $h-shadow: random($screen-width);
+    $v-shadow: random($screen-width);
+
+    $stars: "#{$stars}, #{$h-shadow}px #{$v-shadow}px #{$color}";
+  }
+  @return unquote($stars);
 }
 
 @mixin stars-content($screen-width, $color, $density, $speed, $delay) {
   width: 2px;
   height: 2px;
-	border-radius: 50%;
-	opacity: 0;
-	box-shadow: generate-random-stars($screen-width, $color, $density);
-	animation-name: glowing-stars;
-  animation-duration: $speed+s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-timing-function: linear;
-	animation-delay: $delay+s;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: generate-random-stars($screen-width, $color, $density);
+  animation-name: glowing-stars;
+  animation-duration: $speed + s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: $delay + s;
 }
-
 
 @keyframes glowing-stars {
-  0%   {opacity: 0.4;}
-  50%  {opacity: 1;}
-  100% {opacity: 0.6;}
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
 }
 
 // --------------------------------------------------
 
-$purple: #9a00a4;
-$yellow: rgb(255, 238, 0);
-$yellow-color-light:rgba(255, 238, 0, 0.548);
-$green: #49ff00;
-
-$spacing-unit: 10vw;
-
-// --------------------------------------------------
 
 .title {
   font-family: Arial Black, Gadget, sans-serif;
+  font-weight: bold;
   color: $yellow;
   text-align: center;
-  margin-bottom: $spacing-unit;
+  // margin-bottom: $spacing-unit;
 }
 
 .text {
@@ -72,7 +78,6 @@ $spacing-unit: 10vw;
   font-weight: 100;
   padding: 1em;
   line-height: 1.4em;
-  
 }
 .link {
   font-family: Arial, Gadget, sans-serif;
@@ -87,24 +92,28 @@ $spacing-unit: 10vw;
 
 .gradient-background {
   background-color: $purple-color-dark;
-  background-image: linear-gradient($purple-color-dark 0vh, $purple-color-dark 60vh, $magenta-color 100vh, $magenta-color 90%, $purple-color-dark 100%);
+  background-image: linear-gradient(
+    $purple-color-dark 0vh,
+    $purple-color-dark 60vh,
+    $magenta-color 100vh,
+    $magenta-color 90%,
+    $purple-color-dark 100%
+  );
 }
 // --------------------------------------------------
 
 body.moments-of-empathy {
   @include reset();
   @extend .gradient-background;
-  padding-top: 40px;
   h1 {
     @extend .title;
-    font-size: calc(26px + 9vw);
-    text-shadow: $yellow 1px 0px 0px,$yellow 1px 1px 0px,$yellow -1px 0px 0px,$yellow 0px -1px 0px;
-    margin-bottom: 40px;
+    font-size: calc(17vw);
+    margin-bottom: $spacing-unit;
   }
   h2 {
     @extend .title;
     font-size: calc(26px + 4.5vw);
-    margin-bottom: 10px;
+    margin-top: $spacing-unit * 2;
   }
   h4 {
     @extend .text;
@@ -119,12 +128,11 @@ body.moments-of-empathy {
 
   .content {
     text-align: center;
-    margin-bottom: 25vh;
+    margin-bottom: 45vh;
     img {
       border: 4px #ffffff;
       border-style: solid;
       max-width: 90vw;
-
     }
   }
 
@@ -158,7 +166,6 @@ body.moments-of-empathy {
   }
 }
 
-
 .stars-background {
   @include stars-content(1800, $yellow, 100, 4, 2);
   position: absolute;
@@ -174,13 +181,6 @@ body.moments-of-empathy {
     h2 {
       font-size: calc(16px + 4.5vw);
       font-weight: bold;
-      
     }
   }
 }
-
-
-
-
-
-
