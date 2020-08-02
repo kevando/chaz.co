@@ -18,6 +18,9 @@ twitter_handle: kevando_
 # Images
 simpsons_banner: https://chaz.co/assets/moments-of-empathy/bart-and-skinner.jpg
 
+# Meta Tags
+twitter_card_style: summary_large_image
+
 collections_dir: collections
 collections:
   moments:
