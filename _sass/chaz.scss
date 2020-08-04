@@ -5,20 +5,20 @@
 // -------- Typography --------
 
 $base-font-family: "Times New Roman";
-$base-font-size:   20px !default;
+$base-font-size: 20px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size: $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 // -------- Colors --------
 
-$text-color:       #111 !default;
-$background-color: #C0C0C0 !default;
-$brand-color:      #2a7ae2 !default;
+$text-color: #111 !default;
+$background-color: #c0c0c0 !default;
+$brand-color: #2a7ae2 !default;
 
-$grey-color:       #828282 !default;
+$grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color-dark: darken($grey-color, 25%) !default;
 
 $purple-color: #390774;
 $purple-color-dark: darken($purple-color, 5%) !default;
@@ -27,13 +27,13 @@ $magenta-color-light: lighten($magenta-color, 5%);
 
 // -------- Content Area --------
 
-$spacing-unit:     30px !default;
+$spacing-unit: 30px !default;
 $table-text-align: left !default;
+$content-width: 800px !default;
 
-$content-width:    800px !default;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-palm: 600px !default;
+$on-phone: 600px !default;
+$on-laptop: 800px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -56,4 +56,5 @@ $on-laptop:        800px !default;
 
 @import "surf/base", "surf/typography", "surf/layout";
 @import "surf/button", "surf/power-point";
-@import "chaz/moments-of-empathy";
+
+@import "moments/base";

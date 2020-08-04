@@ -15,13 +15,6 @@
       <!-- Iterate over the collection -->
       {% for moment in site.moments %}
         <div class="moment {{ moment.class }}">
-        
-          {% if moment.image %}
-            <div class="image-wrapper">
-              <img src="{{ moment.image }}" alt="{{ moment.title }}" />
-            </div>
-          {% endif %}
-
           {{ moment.content }}
         </div>
         

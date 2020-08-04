@@ -5,5 +5,5 @@ source: https://www.reddit.com/r/dataisbeautiful/comments/hs9mnz/oc_trending_goo
 class: emoji
 ---
 
-[🇺🇸](https://www.reddit.com/r/dataisbeautiful/comments/hs9mnz/oc_trending_google_searches_by_state_between_2018/)
+[🇺🇸]({{ page.source }})
 {: .emoji }
