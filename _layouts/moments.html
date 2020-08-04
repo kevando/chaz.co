@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body class="moments-of-empathy">
+<body class="moments-of-empathy purple-gradient">
+  <p class="fixed-and-fading">The internet's most elusive resource</p>
 
-    <div class="content">
-      {{ content }}
-  </div>  
+  <!-- Above the Fold -->
+  <header class="full-page">
+    <h1 class="giant-yellow-title"><span>Moments of</span><span>EMPATHY</span></h1>
+    <img src="{{ page.banner_image }}" class="banner" />
+  </header>
 
-    <!-- List of Items -->
-    <div class="moments">
+  <div class="content">
+    {{ content }}
+  </div>
 
-      <!-- Iterate over the collection -->
-      {% for moment in site.moments %}
-        <div class="moment {{ moment.class }}">
-          {{ moment.content }}
-        </div>
-        
-      {% endfor %}
+  <!-- List of Items -->
+  <div class="moments">
+
+    <!-- Iterate over the collection -->
+    {% for moment in site.moments %}
+    <div class="moment {{ moment.class }}">
+      {{ moment.content }}
+      {% if moment.type=="emoji" %}
+      <a class="btn large" href="{{ moment.source_url }}">
+        <span class="emoji">{{moment.emoji}}</span>
+      </a>
+      {% endif %}
     </div>
-    
-    <div class="stars-background"></div>
-  </body>
 
+    {% endfor %}
+  </div>
+
+  <footer class="moments">
+    👁👋👂👄👂🧠🤝🙏
+  </footer>
+
+  <div class="stars-background"></div>
+</body>
 
 </html>

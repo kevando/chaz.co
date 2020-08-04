@@ -1,9 +1,7 @@
 ---
 title: Windows
 author: idk
-source: https://window-swap.com/asdf
-class: emoji
+source_url: https://window-swap.com
+type: emoji
+emoji: 🏠
 ---
-
-[🗺]({{ page.source }})
-{: .emoji }

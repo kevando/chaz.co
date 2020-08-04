@@ -32,7 +32,7 @@ $table-text-align: left !default;
 $content-width: 800px !default;
 
 $on-palm: 600px !default;
-$on-phone: 600px !default;
+$on-tablet: 1600px !default;
 $on-laptop: 800px !default;
 
 // Use media queries like this:
@@ -57,4 +57,5 @@ $on-laptop: 800px !default;
 @import "surf/base", "surf/typography", "surf/layout";
 @import "surf/button", "surf/power-point";
 
-@import "moments/base";
+@import "helpers";
+@import "layouts/moments";

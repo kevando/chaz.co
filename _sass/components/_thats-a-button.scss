@@ -1,0 +1,79 @@
+// ------------------------------------------------
+//  That's a button
+// ------------------------------------------------
+
+$grey-color: #c2c3c0;
+$button-color: lighten($grey-color, 2%);
+$button-color-pressed: lighten($grey-color, 5%);
+$grey-dark-color: #827d82;
+$border-dark-color: black;
+$border-light-color: #fffffe;
+$black-color: #000303;
+$transparent-black-color: rgba(0, 0, 0, 0.1);
+$transparent-white-color: rgba(255, 255, 255, 0.8);
+
+$border-dark: solid 7px #333;
+$border-light: solid 5px #fffffe;
+
+// -------- Shared Classes --------
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.large {
+  width: 90px;
+  height: 90px;
+  font-size: 55px;
+}
+
+.raised {
+  border-style: outset;
+  background-color: $button-color;
+  border-right: $border-dark;
+  border-bottom: $border-dark;
+  border-top: $border-light;
+  border-left: $border-light;
+  //  text-shadow: $transparent-black-color 0px 0px 35px;
+}
+
+.pressed {
+  border-style: inset;
+  background-color: $button-color-pressed;
+  border-right: $border-light;
+  border-bottom: $border-light;
+  border-top: $border-dark;
+  border-left: $border-dark;
+  //  text-shadow: $transparent-white-color 0px 0px 15px!important;
+  > span {
+    margin-bottom: 2px;
+    border-right: none;
+  }
+}
+// -------- Button Class--------
+
+.btn {
+  @extend .flex-center;
+  @extend .raised;
+  text-decoration: underline;
+  color: $button-color !important;
+  cursor: pointer;
+
+  &:active,
+  &:focus {
+    @extend .pressed;
+  }
+  &:hover {
+    text-shadow: $transparent-black-color 0px 0px 25px;
+  }
+  &:visited {
+    color: darken($button-color, 5%) !important;
+  }
+
+  > span {
+    @extend .flex-center;
+    width: 100%;
+    height: 100%;
+  }
+}

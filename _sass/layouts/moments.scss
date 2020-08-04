@@ -1,3 +1,7 @@
+@import "../components/stars";
+@import "../components/thats-a-button";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,700;1,900&display=swap");
+
 $purple: #9a00a4;
 $yellow: rgb(255, 238, 0);
 $yellow-color-light: rgba(255, 238, 0, 0.548);
@@ -5,72 +9,83 @@ $green: #49ff00;
 
 $spacing-unit: 7vh;
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,700;1,900&display=swap");
+$spacing-unit-content: 8vh;
+$spacing-unit-text: 3vh;
+
+$title-font-family: Arial Black, Gadget, sans-serif;
 
 // --------------------------------------------------
 
-@mixin reset() {
-  * {
-    padding: 0;
-    margin: 0;
-    line-height: 1em;
+body.purple-gradient {
+  background-color: $purple-color-dark;
+
+  background-image: linear-gradient(
+    $purple-color-dark 0vh,
+    $purple-color-dark 60vh,
+    $magenta-color 100vh,
+    $magenta-color 90%,
+    $purple-color-dark 100%
+  );
+}
+
+// height: 100vh;
+// display: flex;
+// flex-direction: column;
+// justify-content: space-evenly;
+
+// Page Title
+
+header.full-page {
+  // background-color:red;
+
+  h1.giant-yellow-title {
+    margin: 9vh 0;
+    font-family: $title-font-family;
+    font-weight: bold;
+    color: $yellow;
+    text-align: center;
+
+    span {
+      display: block;
+      &:nth-child(1) {
+        @include fluid-type(10vw, 5vw);
+        line-height: 0.7;
+        margin-bottom: $spacing-unit-text;
+      }
+      &:nth-child(2) {
+        @include fluid-type(19vw, 10vw);
+        line-height: 0.81;
+      }
+    }
+  }
+  img.banner {
+    margin: 0 auto 8vh auto;
+    display: block;
+
+    border: 4px #ffffff;
+    border-style: solid;
+    max-width: 90vw;
   }
 }
 
-@function generate-random-stars($screen-width, $color, $density) {
-  $h-shadow: random($screen-width);
-  $v-shadow: random($screen-width);
-
-  $stars: "#{$h-shadow}px #{$v-shadow}px #{$color}";
-  @for $i from 2 through $density {
-    $h-shadow: random($screen-width);
-    $v-shadow: random($screen-width);
-
-    $stars: "#{$stars}, #{$h-shadow}px #{$v-shadow}px #{$color}";
-  }
-  @return unquote($stars);
+footer.moments {
+  margin: $spacing-unit-content;
+  @include fluid-type(7vw, 4vw);
+  letter-spacing: 2vw;
+  line-height: 0.1;
 }
 
-@mixin stars-content($screen-width, $color, $density, $speed, $delay) {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  opacity: 0;
-  box-shadow: generate-random-stars($screen-width, $color, $density);
-  animation-name: glowing-stars;
-  animation-duration: $speed + s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-delay: $delay + s;
-}
-
-@keyframes glowing-stars {
-  0% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
-}
-
-// --------------------------------------------------
-
-.title {
-  font-family: Arial Black, Gadget, sans-serif;
-  font-weight: bold;
-  color: $yellow;
+p.fixed-and-fading {
+  position: absolute;
+  font-family: Arial;
+  letter-spacing: 1px;
+  top: 89vh;
+  width: 100%;
   text-align: center;
+  color: rgba(255, 255, 255, 0.21);
 }
 
-.text {
-  font-family: Verdana, Geneva, sans-serif;
-  color: white;
-}
-.link {
+a {
   font-family: Arial, Gadget, sans-serif;
   color: $yellow;
   font-weight: 400;
@@ -83,52 +98,23 @@ $spacing-unit: 7vh;
   }
 }
 
-.gradient-background {
-  background-color: $purple-color-dark;
-  background-image: linear-gradient(
-    $purple-color-dark 0vh,
-    $purple-color-dark 60vh,
-    $magenta-color 100vh,
-    $magenta-color 90%,
-    $purple-color-dark 100%
-  );
-}
 // --------------------------------------------------
 
-body.moments-of-empathy {
-  @include reset();
-  @extend .gradient-background;
+.text {
+  font-family: Verdana, Geneva, sans-serif;
+  color: white;
+}
 
-  h4 {
-    @extend .text;
-    font-size: calc(16px + 0.5vw);
-  }
+body.moments-of-empathy {
+  @extend .reset;
+
   blockquote {
     border: none;
-  }
-  a {
-    @extend .link;
   }
 
   .content {
     text-align: center;
     margin-bottom: 45vh;
-    h1 {
-      @extend .title;
-      font-size: calc(17vw);
-      margin-bottom: $spacing-unit * 1.8;
-    }
-    h2 {
-      @extend .title;
-      font-size: calc(26px + 4.5vw);
-      margin-top: $spacing-unit * 2;
-    }
-
-    img {
-      border: 4px #ffffff;
-      border-style: solid;
-      max-width: 90vw;
-    }
   }
 
   // Layout
@@ -183,6 +169,8 @@ body.moments-of-empathy {
   position: absolute;
 }
 // --------------------------------------------------
+//                     Mobile
+// --------------------------------------------------
 
 @include media-query($on-palm) {
   body.moments-of-empathy {
@@ -201,7 +189,6 @@ body.moments-of-empathy {
           border: none;
 
           blockquote p {
-            color: white;
             font-weight: 300;
             font-size: 30px;
           }
@@ -213,6 +200,25 @@ body.moments-of-empathy {
         &.emoji {
           a {
             font-size: 40vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-tablet-only() {
+  body.moments-of-empathy {
+    .moments {
+      .moment {
+        &.quote {
+          blockquote p {
+            font-weight: 300;
+            font-size: 30px;
+          }
+          p {
+            margin-top: 20px;
+            font-size: 1.2em;
           }
         }
       }
