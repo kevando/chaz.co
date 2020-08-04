@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "jekyll serve --livereload",
     "git": "git add . && git commit -m",
+    "pregit": "git pull --all",
     "postgit": "git push --all"
   }
 }
