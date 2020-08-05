@@ -1,7 +1,7 @@
 @import "../components/stars";
 @import "../components/thats-a-button";
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,700;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,900&display=swap");
 
 $purple: #9a00a4;
 $yellow: rgb(255, 238, 0);
@@ -13,7 +13,7 @@ $spacing-unit: 7vh;
 $spacing-unit-content: 8vh;
 $spacing-unit-text: 3vh;
 
-$title-font-family: 'Montserrat', sans-serif;
+$title-font-family: "Montserrat", sans-serif;
 
 // --------------------------------------------------
 
@@ -28,7 +28,12 @@ body.purple-gradient {
   );
 }
 
+// ----------------------------------
+//            Header
+// ----------------------------------
 header.full-page {
+  margin-bottom: $spacing-unit-content * 2;
+  position: relative;
 
   h1.giant-yellow-title {
     margin: 9vh 0;
@@ -59,23 +64,27 @@ header.full-page {
     border-style: solid;
     max-width: 90vw;
   }
+  p.fixed-and-fading {
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.21);
+    @include tablet() {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1z;
+    }
+    @include fadeIn(10s);
+  }
 }
+
+// Footer
 
 footer.moments {
   margin: $spacing-unit-content;
   @include fluid-type(7vw, 4vw);
   letter-spacing: 2vw;
   line-height: 0.1;
-}
-
-p.fixed-and-fading {
-  position: absolute;
-  letter-spacing: 1px;
-  top: 91vh;
-  width: 100%;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.21);
-  font-size: 0.85em;
 }
 
 a {
@@ -89,7 +98,7 @@ a {
     color: $purple;
   }
 }
-P{
+P {
   font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -100,61 +109,72 @@ P{
   color: white;
 }
 
-body.moments-of-empathy {
+body {
   @extend .reset;
+}
 
+
+// ----------------------------------
+//        Moments List
+// ----------------------------------
+.moments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .moment {
+    max-width: 800px;
+    margin-bottom: 30vh;
+    &.golden {
+      box-shadow: $yellow 0px 0px 50px 25px;
+      border: 3px $yellow solid;
+    }
+    .image-wrapper {
+      max-width: 70vw;
+    }
+  }
+}
+
+.moment.quote {
+  border: solid 2px $yellow;
+  width: 90vw;
+  padding: 3em 2em;
   blockquote {
     border: none;
-  }
+    p {
+      line-height: 1.3em;
+      font-family: "Lato";
+      font-size: 40px;
+      border: none;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 100;
+      margin-bottom: 10px;
+      font-size: 1.6em;
+      strong {
+        font-weight: 500;
+      }
 
-  .content {
-    text-align: center;
-    margin-bottom: 45vh;
-  }
+      @include tablet() {
+        font-weight: 300;
+        font-size: 30px;
 
-  // Layout
-  .moments {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .moment {
-      max-width: 800px;
-      margin-bottom: 20vh;
-
-      &.quote {
-        border: solid 2px $yellow;
-        width: 90vw;
-        padding: 3em 2em;
-        blockquote p {
-          line-height: 1.3em;
-          font-family: "Lato";
-          font-size: 40px;
-          border: none;
-          color: rgba(255, 255, 255, 0.8);
-          font-weight: 100;
-          margin-bottom: 10px;
-        }
         p {
-          font-size: 1.6em;
-          strong {
-            font-weight: 500;
-          }
+          margin-top: 20px;
+          font-size: 1.2em;
         }
       }
+    }
+  }
+  @include phone() {
+    border: none;
+    padding: 2em 1em;
 
-      &.golden {
-        box-shadow: $yellow 0px 0px 50px 25px;
-        border: 3px $yellow solid;
-      }
-      .image-wrapper {
-        max-width: 70vw;
-      }
-      &.emoji {
-        a {
-          font-size: 15vh;
-        }
-      }
+    blockquote p {
+      font-weight: 300;
+      font-size: 30px;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 1.2em;
     }
   }
 }
@@ -163,60 +183,16 @@ body.moments-of-empathy {
   @include stars-content(1800, $yellow, 300, 4, 2);
   position: absolute;
 }
-// --------------------------------------------------
-//                     Mobile
-// --------------------------------------------------
 
-@include media-query($on-palm) {
-  body.moments-of-empathy {
-    h1 {
-      font-weight: bold;
-      font-size: calc(16px + 15.5vw);
-    }
-    h2 {
-      font-size: calc(16px + 4.5vw);
-      font-weight: bold;
-    }
-    .moments {
-      .moment {
-        &.quote {
-          padding: 2em 1em;
-          border: none;
-
-          blockquote p {
-            font-weight: 300;
-            font-size: 30px;
-          }
-          p {
-            margin-top: 20px;
-            font-size: 1.2em;
-          }
-        }
-        &.emoji {
-          a {
-            font-size: 40vw;
-          }
-        }
-      }
-    }
-  }
-}
-
-@include for-tablet-only() {
-  body.moments-of-empathy {
-    .moments {
-      .moment {
-        &.quote {
-          blockquote p {
-            font-weight: 300;
-            font-size: 30px;
-          }
-          p {
-            margin-top: 20px;
-            font-size: 1.2em;
-          }
-        }
-      }
-    }
+// ----------------------------------
+//            Emoji Link
+// ----------------------------------
+a.emoji {
+  @include fluid-type(90px, 90px);
+  text-shadow: $yellow 0px 0px 20px, $yellow 0px 0px 30px, $yellow 0px 0px 40px,$yellow 0px 0px 70px;
+  text-decoration: none;;
+  &:visited {
+    color: green!important;
+    @include fluid-type(9px, 9px);
   }
 }

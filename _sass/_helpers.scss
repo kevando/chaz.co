@@ -36,6 +36,43 @@ $big-time: 1500px;
 
 // -----------------------------------
 
+@mixin fadeIn($duration: 1s) {
+  opacity: 0;
+  animation: fadeInAnimation ease-in $duration;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+// @mixin transition($args...) {
+//   -webkit-transition: $args;
+//   -moz-transition: $args;
+//   -ms-transition: $args;
+//   -o-transition: $args;
+//   transition: $args;
+// }
+
+// -----------------------------------
+
+@mixin tablet() {
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin phone() {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
 @mixin for-tablet-only() {
   @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
     @content;
