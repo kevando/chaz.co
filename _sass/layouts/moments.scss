@@ -130,6 +130,13 @@ body {
     }
     .image-wrapper {
       max-width: 70vw;
+      margin: 0;
+    }
+    &.chipotle, > * {
+      max-width: 100%;
+      > * {
+        max-width: 100%;;
+      }
     }
   }
 }

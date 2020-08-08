@@ -2,6 +2,8 @@
 layout: surf
 name: empathy
 title: What is Empathy?
+permalink: /emxpathy
+published: false
 description: >
      "Humanity's future depends on empathy" - Stephen Hawking
 image: https://chaz.co/assets/images/empathy_houses.jpg
