@@ -4,43 +4,39 @@
 {%- include head.html -%}
 
 <body class="moments-of-empathy purple-gradient">
-  
 
-  <!-- Above the Fold -->
-  <header class="full-page">
-    <h1 class="giant-yellow-title"><span>Moments of</span><span>EMPATHY</span></h1>
-    <img src="{{ page.banner_image }}" class="banner" />
-    <p class="fixed-and-fading">The internet's most elusive resource</p>
-  </header>
+	<!-- Above the Fold -->
+	<header class="full-page">
+		<h1 class="giant-yellow-title"><span>Moments of</span><span>EMPATHY</span></h1>
+		<img src="{{ page.banner_image }}" class="banner" />
+		<p class="fixed-and-fading">The internet's most elusive resource</p>
+	</header>
 
- 
+	<!-- List of Items -->
+	<div class="moments">
 
-  <!-- List of Items -->
-  <div class="moments">
+		<!-- Iterate over the collection -->
+		{% for moment in site.moments %}
+		<div class="moment {{ moment.class }}">
+			{{ moment.content }}
+			{% if moment.type=="emoji" %}
+			<a class="emoji" href="{{ moment.source_url }}">
+				<span>{{moment.emoji}}</span>
+			</a>
+			{% endif %}
+		</div>
 
-    <!-- Iterate over the collection -->
-    {% for moment in site.moments %}
-    <div class="moment {{ moment.class }}">
-      {{ moment.content }}
-      {% if moment.type=="emoji" %}
-      <a class="emoji" href="{{ moment.source_url }}">
-        <span>{{moment.emoji}}</span>
-      </a>
-      {% endif %}
-    </div>
+		{% endfor %}
+	</div>
 
-    {% endfor %}
-  </div>
+	<div class="content">{{ content }}</div>
+	<footer class="moments">👁👋👂👄👂🧠🤝🙏</footer>
+	<div class="stars-background"></div>
 
-  <div class="content">
-    {{ content }}
-  </div>
-
-  <footer class="moments">
-    👁👋👂👄👂🧠🤝🙏
-  </footer>
-
-  <div class="stars-background"></div>
 </body>
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/main.css" />
 
 </html>

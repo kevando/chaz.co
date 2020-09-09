@@ -16,8 +16,7 @@
   <!-- Title -->
   <title>{{ title }}</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/assets/main.css" />
+
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.icon256 }}" />
@@ -32,14 +31,14 @@
   <meta name="twitter:site" content="{{ site.twitter_handle }}" />
   <meta name="twitter:title" content="{{ twitter_title}}" />
   <meta name="twitter:description" content="{{ twitter_description }}" />
-  <meta name="twitter:image" content="{{ twitter_image }}" />
+  <meta name="twitter:image" content="{{ site.url }}{{ twitter_image }}" />
 
   <!-- Facebook Preview Tags -->
   <meta property="og:url" content="https://chaz.co" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ facebook_title}}" />
   <meta property="og:description" content="{{ facebook_description }}" />
-  <meta property="og:image" content="{{ facebook_image }}" />
+  <meta property="og:image" content="{{ site.url }}{{ facebook_image }}" />
 
   {%- include google-analytics.html -%}
 </head>
